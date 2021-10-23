@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerificaFipe</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<header class="header">
+    <div onclick="window.href='https://localhost:5000'">VerificaFipe</div>
+</header>
+<main class="container">
+    <section class="formPrincipal">
+        <form class="form" method="POST" action="/value">
+            <div class="formSingle">
+                <label for="year">Selecione o ano/combustível</label>
+                <input type="hidden" value="{{ codMarca }}" name="codMarca">
+                <input type="hidden" value="{{ codModelo }}" name="codModelo">
+                <input type="hidden" value="{{ tipo }}" name="tipo">
+                <select id="year" name="year">
+                    <option value="">Selecione o Ano</option>
+                    {% for i in range(0,(response)| length) %}
+                        <option value="{{ response[i]['codigo'] }}">{{ response[i]['nome'] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>

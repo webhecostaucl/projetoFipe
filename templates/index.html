@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VerificaFipe</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="titulo" onclick="window.href='https://localhost:5000'">VerificaFipe</div>
+</header>
+<main class="container">
+    <section class="formPrincipal">
+        <div class="subForm">
+            <form class="form" method="POST" action="/manufact">
+            <div class="formSingle">
+                <label for="type">Selecione o tipo do veículo:</label>
+                <select id="type" required name="type">
+                    <option value="">Tipo</option>
+                    <option value="carros">Carros</option>
+                    <option value="motos">Motos</option>
+                    <option value="caminhoes">Caminhões</option>
+                </select>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        </div>
+    </section>
+</main>
+</body>
+</html>
